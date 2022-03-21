@@ -1,7 +1,7 @@
 Edited by **HolaBanana#4215** for **WWRP Development**
 Added compatibillity for **wwrpNotify**
 
-**NO SUPPORT PROVIDED BY MYSELF OR THE ORIGINAL AUTHOR**
+**NO SUPPORT PROVIDED BY MYSELF**
 
 I can only offer support for wwrpNotify
 
