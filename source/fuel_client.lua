@@ -138,6 +138,9 @@ AddEventHandler('fuel:startFuelUpTick', function(pumpObject, ped, vehicle)
 
 	if pumpObject then
 		TriggerServerEvent('fuel:pay', currentCost)
+		if Config.LegacyFuel and Config.LegacyFuel.Enabled then
+			TriggerEvent('wwrpNotify:Notify', "info", Config.FuelPayTitle, Config.FuelPayText ..currentCost..'')
+		end
 	end
 
 	currentCost = 0.0
@@ -223,6 +226,9 @@ Citizen.CreateThread(function()
 
 									TriggerEvent('fuel:refuelFromPump', isNearPump, ped, vehicle)
 									LoadAnimDict("timetable@gardener@filling_can")
+									if Config.LegacyFuel and Config.LegacyFuel.Enabled then
+										TriggerEvent('wwrpNotify:Notify', "info", Config.FuelTitle, Config.FuelText)
+									end
 								end
 							else
 								DrawText3Ds(stringCoords.x, stringCoords.y, stringCoords.z + 1.2, Config.Strings.NotEnoughCash)
@@ -244,6 +250,9 @@ Citizen.CreateThread(function()
 								GiveWeaponToPed(ped, 883325847, 4500, false, true)
 
 								TriggerServerEvent('fuel:pay', Config.JerryCanCost)
+								if Config.LegacyFuel and Config.LegacyFuel.Enabled then
+									TriggerEvent('wwrpNotify:Notify', "info", Config.CanBuyTitle, Config.CanBuyText ..Config.JerryCanCost..'')
+								end
 
 								currentCash = ESX.GetPlayerData().money
 							end
@@ -259,6 +268,9 @@ Citizen.CreateThread(function()
 											TriggerServerEvent('fuel:pay', refillCost)
 
 											SetPedAmmo(ped, 883325847, 4500)
+											if Config.LegacyFuel and Config.LegacyFuel.Enabled then
+												TriggerEvent('wwrpNotify:Notify', "info", Config.CanFuelTitle, Config.CanFuelText ..refillCost..'')
+											end
 										end
 									else
 										DrawText3Ds(stringCoords.x, stringCoords.y, stringCoords.z + 1.2, Config.Strings.NotEnoughCashJerryCan)
