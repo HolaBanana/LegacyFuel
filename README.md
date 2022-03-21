@@ -1,3 +1,15 @@
+Edited by **HolaBanana#4215** for **WWRP Development**
+Added compatibillity for **wwrpNotify**
+
+**NO SUPPORT PROVIDED BY MYSELF OR THE ORIGINAL AUTHOR**
+
+I can only offer support for wwrpNotify
+
+For more informations - https://discord.gg/gFGgzbf9aP
+
+
+
+
 ### About
 Started off as my first script, and for whatever reason, I decided to release it. As it was pretty badly created, I felt like I should rewrite it and make a better version, so ended up spending a few hours doing so.
 
