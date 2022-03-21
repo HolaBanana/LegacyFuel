@@ -23,6 +23,26 @@ Config.ShowAllGasStations = false
 -- Modify the fuel-cost here, using a multiplier value. Setting the value to 2.0 would cause a doubled increase.
 Config.CostMultiplier = 1.0
 
+-- wwrpNotify true/false
+Config.LegacyFuel = {
+	Enabled = true
+}
+-- For wwrpNotify - Refuelling JerryCan
+Config.CanFuelTitle = 'FUEL' -- Your title on the notification (can be empty)
+Config.CanFuelText = 'You filled up that canister for $' -- Your text on the notification
+
+-- For wwrpNotify - Buying JerryCan
+Config.CanBuyTitle = 'FUEL' -- Your title on the notification (can be empty)
+Config.CanBuyText = 'You bought a canister for $' -- Your text on the notification
+
+-- For wwrpNotify - Refuelling on Pump
+Config.FuelTitle = 'FUEL' -- Your title on the notification (can be empty)
+Config.FuelText = 'Refuelling...' -- Your text on the notification
+
+-- For wwrpNotify - Paying at the Pump
+Config.FuelPayTitle = 'FUEL' -- Your title on the notification (can be empty)
+Config.FuelPayText = 'You paid $' -- Your text on the notification
+
 -- Configure the strings as you wish here.
 Config.Strings = {
 	ExitVehicle = "Exit the vehicle to refuel",
